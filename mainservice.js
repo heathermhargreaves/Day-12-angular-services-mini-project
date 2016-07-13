@@ -3,6 +3,8 @@ angular.module('userProfiles').service('MainService', function($http){
       return $http({
         method: 'GET',
         url: 'http://reqres.in/api/users?page=1'
+      }).then(function(response) {
+        return response.data.data;
       });
     };
 
